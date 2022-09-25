@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <style>
+      h1 {
+        text-align: center;
+        border: dashed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align="center">Reverse String</h1>
+    <script language="javascript">
+      function check()
+      {
+      	var str = prompt("Enter a string value")
+      	document.write("Entered String is " + str + ".")
+      	var str_array = str.split('')
+      	var array_rev = str_array.reverse()
+      	var str_rev = array_rev.join('')
+      	document.write(" The reverse of entered string is‎‎‏‏‎ ‎" + str_rev + ".")
+      	if (str == str_rev) {
+      		document.write(" The string is Palindrome")
+      	}
+      	else {
+      		document.write(" The string is not Palindrome")
+      	}
+      }
+    </script>
+    <form>
+      <input type="button" value="Click here to start" onClick="check()" />
+    </form>
+  </body>
+</html>
+

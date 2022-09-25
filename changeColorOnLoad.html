@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background colors</title>
+    <script type="text/javascript">
+      function f1() {
+        document.bgColor = "red";
+        window.setTimeout("f2()", 800);
+      }
+      function f2() {
+        document.bgColor = "yellow";
+        window.setTimeout("f3()", 800);
+      }
+      function f3() {
+        document.bgColor = "pink";
+        window.setTimeout("f4()", 800);
+      }
+      function f4() {
+        document.bgColor = "purple";
+        window.setTimeout("f5()", 800);
+      }
+      function f5() {
+        document.bgColor = "cyan";
+        window.setTimeout("f6()", 800);
+      }
+      function f6() {
+        document.bgColor = "magenta";
+        window.setTimeout("f7()", 800);
+      }
+      function f7() {
+        document.bgColor = "green";
+        window.setTimeout("f1()", 800);
+      }
+    </script>
+  </head>
+  <body onload="f1()"></body>
+</html>

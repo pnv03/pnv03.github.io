@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Enter Marks
+    </title>
+    <h1 align="center">Report Card</h1>
+    <script language="javascript">
+      function submit_marks() {
+        var Physics = parseInt(prompt("Enter Physics Marks"));
+        var Maths = parseInt(prompt("Enter Maths Marks"));
+        var Chemistry = parseInt(prompt("Enter Chemistry Marks"));
+        var Geography = parseInt(prompt("Enter Geography Marks"));
+        var IT = parseInt(prompt("Enter IT Marks"));
+        var English = parseInt(prompt("Enter English Marks"));
+        var Total = Physics + Maths + Chemistry + Geography + IT + English;
+        if (Total > 600 || Total < 0) {
+        Total = "Invalid"
+        } 
+        else {
+        var Percentage = Total / 6;
+          var grade;
+          if (Percentage >= 0 && Percentage < 35) {
+            grade = "F";
+          } else if (Percentage >= 35 && Percentage < 60) {
+            grade = "E";
+          } else if (Percentage >= 60 && Percentage < 70) {
+            grade = "D";
+          } else if (Percentage >= 70 && Percentage < 80) {
+            grade = "C";
+          } else if (Percentage >= 80 && Percentage < 90) {
+            grade = "B";
+          } else if (Percentage >= 90 && Percentage <= 100) {
+            grade = "A";
+          } else {
+            grade = "Invalid";
+          }
+          document.getElementById("phyScore").innerText = Physics;
+          document.getElementById("matScore").innerText = Maths;
+          document.getElementById("cheScore").innerText = Chemistry;
+          document.getElementById("geoScore").innerText = Geography;
+          document.getElementById("it_Score").innerText = IT;
+          document.getElementById("engScore").innerText = English;
+          document.getElementById("totScore").innerText = Total;
+          document.getElementById("perScore").innerText = Percentage;
+          document.getElementById("grdScore").innerText = grade;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table border>
+      <tr>
+        <th>Subject</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td>Physics</td>
+        <td id="phyScore"></td>
+      </tr>
+      <tr>
+        <td>Maths</td>
+        <td id="matScore"></td>
+      </tr>
+      <tr>
+        <td>Chemistry</td>
+        <td id="cheScore"></td>
+      </tr>
+      <tr>
+        <td>Geography</td>
+        <td id="geoScore"></td>
+      </tr>
+      <tr>
+        <td>IT</td>
+        <td id="it_Score"></td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td id="engScore"></td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td id="totScore"></td>
+      </tr>
+      <tr>
+        <td>Percentage</td>
+        <td id="perScore"></td>
+      </tr>
+      <tr>
+        <td>Grade</td>
+        <td id="grdScore"></td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <form>
+      <input
+        type="button"
+        value="Click to Check Your Result"
+        onClick="submit_marks()"
+      />
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
